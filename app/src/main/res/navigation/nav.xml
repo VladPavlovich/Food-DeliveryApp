@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/logInScreen"
+        android:name="com.text.finalproject.LogInScreen"
+        android:label="fragment_log_in_screen"
+        tools:layout="@layout/fragment_log_in_screen" >
+        <action
+            android:id="@+id/action_logInScreen_to_homeScreen"
+            app:destination="@id/homeScreen" />
+        <action
+            android:id="@+id/action_logInScreen_to_takeImageFragment"
+            app:destination="@id/takeImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.text.finalproject.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_logInScreen"
+            app:destination="@id/logInScreen" />
+        <action
+            android:id="@+id/action_splashFragment_to_homeScreen"
+            app:destination="@id/homeScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeScreen"
+        android:name="com.text.finalproject.HomeScreen"
+        android:label="fragment_home_screen"
+        tools:layout="@layout/fragment_home_screen" >
+        <action
+            android:id="@+id/action_homeScreen_to_restaurantScreen"
+            app:destination="@id/restaurantScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/takeImageFragment"
+        android:name="com.text.finalproject.TakeImageFragment"
+        android:label="TakeImageFragment" >
+        <action
+            android:id="@+id/action_takeImageFragment_to_logInScreen"
+            app:destination="@id/logInScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/recentOrders"
+        android:name="com.text.finalproject.RecentOrders"
+        android:label="fragment_recent_orders"
+        tools:layout="@layout/fragment_recent_orders" />
+    <fragment
+        android:id="@+id/calenderView"
+        android:name="com.text.finalproject.CalenderView"
+        android:label="fragment_calender_view"
+        tools:layout="@layout/fragment_calender_view" />
+    <fragment
+        android:id="@+id/restaurantScreen"
+        android:name="com.text.finalproject.RestaurantScreen"
+        android:label="fragment_restaurant_screen"
+        tools:layout="@layout/fragment_restaurant_screen">
+        <argument
+            android:name="restaurantName"
+            app:argType="string" />
+        <argument
+            android:name="foodItems"
+            app:argType="com.text.finalproject.FoodItem[]"/>
+        <action
+            android:id="@+id/action_restaurantScreen_to_checkoutScreen"
+            app:destination="@id/checkoutScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/restaurantFoodItemsFragment2"
+        android:name="com.text.finalproject.RestaurantFoodItemsFragment"
+        android:label="RestaurantFoodItemsFragment" />
+    <fragment
+        android:id="@+id/checkoutScreen"
+        android:name="com.text.finalproject.CheckoutScreen"
+        android:label="fragment_checkout_screen"
+        tools:layout="@layout/fragment_checkout_screen" >
+        <argument
+            android:name="foodOrder"
+            app:argType="com.text.finalproject.FoodOrder"/>
+
+        <action
+            android:id="@+id/action_checkoutScreen_to_ordersScreen"
+            app:destination="@id/ordersScreen" />
+        <action
+            android:id="@+id/action_checkoutScreen_to_restaurantScreen"
+            app:destination="@id/restaurantScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/ordersScreen"
+        android:name="com.text.finalproject.OrdersScreen"
+        android:label="fragment_orders_screen"
+        tools:layout="@layout/fragment_orders_screen" >
+        <action
+            android:id="@+id/action_ordersScreen_to_mapFragment"
+            app:destination="@id/mapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.text.finalproject.MapFragment"
+        android:label="MapFragment" >
+        <action
+            android:id="@+id/action_mapFragment_to_homeScreen"
+            app:destination="@id/homeScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/calendarViewFragment"
+        android:name="com.text.finalproject.CalendarViewFragment"
+        android:label="fragment_calendar_view"
+        tools:layout="@layout/fragment_calendar_view" />
+</navigation>

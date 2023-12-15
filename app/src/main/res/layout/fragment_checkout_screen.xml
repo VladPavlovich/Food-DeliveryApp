@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Container for dynamically adding food item views -->
+        <LinearLayout
+            android:id="@+id/foodItemsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Dynamic food item views will be added here -->
+        </LinearLayout>
+
+        <!-- EditText for Delivery Address -->
+        <EditText
+            android:id="@+id/deliveryAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="delivery_address"
+            android:inputType="textPostalAddress"
+            android:padding="8dp"
+            android:layout_marginTop="16dp"/>
+
+        <!-- EditText for Special Instructions -->
+        <EditText
+            android:id="@+id/specialInstructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="special_instructions"
+            android:inputType="textMultiLine"
+            android:padding="8dp"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Place Order Button -->
+        <Button
+            android:id="@+id/modifyOrderButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="modify order"
+            android:layout_marginTop="16dp"
+            android:padding="12dp"/>
+
+        <Button
+            android:id="@+id/placeOrderButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="place_order"
+            android:layout_marginTop="16dp"
+            android:padding="12dp"/>
+
+        <!-- Other views such as buttons, text inputs for address etc. can follow here -->
+
+    </LinearLayout>
+</ScrollView>
