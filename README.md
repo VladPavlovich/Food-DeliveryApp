@@ -1,4 +1,4 @@
-# Final Project
+# Food Delivery Application
 This application allows user to order food from five restuarants near them. This app utilzes firebase authentication, firestore, cloud storage.
 This applicaiton allows user to track app using google maps API with the geo locations.
 
